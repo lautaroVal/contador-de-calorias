@@ -7,19 +7,28 @@ export default function Form() {
     category: 1,
     name: '',
     calories: 0
-
   })
 
+  const handleChange = (e) => {
+    setActivity({
+      ...activity,
+      [e.target.id]: e.target.value
+    }) 
+  }
+
   return (
+   
     <form 
     className="space-y-5 bg-white shadow p-10 rounded-lg"
     >
+     {activity.name}
       <div className="grid grid-cols-1 gap-3">
         <label htmlFor="category" className="font-bold">Categoria:</label>
         <select 
         className="border border-slate-300 p-2 rounded-lg w-full bg-white"
         id="category"
         value={activity.category}
+        onChange={handleChange}
         >
           {categories.map(category =>(
             <option
@@ -40,6 +49,7 @@ export default function Form() {
         className="border border-slate-300 p-2 rounded-lg"
         placeholder="Ej: Comida, Juego de Naranja, Ensalada, Ejercicio, Pesas, Bicicleta"
         value={activity.name}
+        onChange={handleChange}
         />
          </div>
 
@@ -51,6 +61,7 @@ export default function Form() {
         className="border border-slate-300 p-2 rounded-lg"
         placeholder="Calorías. Ej: 200, 300"
         value={activity.calories}
+        onChange={handleChange}
         />
 
         <input 
