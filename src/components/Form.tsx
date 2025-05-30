@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, ChangeEvent } from "react"
 import { categories } from "../data/categories"
 
 export default function Form() {
@@ -9,7 +9,7 @@ export default function Form() {
     calories: 0
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement> | ChangeEvent<HTMLInputElement>) => {
     setActivity({
       ...activity,
       [e.target.id]: e.target.value
@@ -47,7 +47,7 @@ export default function Form() {
         id="name"
         type="text"
         className="border border-slate-300 p-2 rounded-lg"
-        placeholder="Ej: Comida, Juego de Naranja, Ensalada, Ejercicio, Pesas, Bicicleta"
+        placeholder="Ej: Comida, Jugo de Naranja, Ensalada, Ejercicio, Pesas, Bicicleta"
         value={activity.name}
         onChange={handleChange}
         />
