@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { ChangeEvent } from "react"
+import type { ChangeEvent, FormEvent } from "react"
 import type { Activity } from "../types"
 import { categories } from "../data/categories"
 
@@ -24,10 +24,16 @@ export default function Form() {
     return name.trim() !== '' && calories > 0
   }
 
+  const handleSubmit = (e : FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    alert('Enviando formulario...')
+  }
+
   return (
    
     <form 
     className="space-y-5 bg-white shadow p-10 rounded-lg"
+    onSubmit={handleSubmit}
     >
       <div className="grid grid-cols-1 gap-3">
         <label htmlFor="category" className="font-bold">Categoria:</label>
