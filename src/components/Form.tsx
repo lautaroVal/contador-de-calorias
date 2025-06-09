@@ -33,12 +33,6 @@ export default function Form({dispatch} : FormProps) {
     e.preventDefault()
 
     dispatch({type: "save-activity", payload:{newActivity: activity}})
-
-    /* 
-
-145. Ejecutando las acciones con dispatch   [ 6:50 mts ]
-     */
-
   }
 
   return (
