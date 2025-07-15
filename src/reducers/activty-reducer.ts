@@ -6,7 +6,7 @@ export type ActivityActions =
 
 type ActivityState = {
     activities: Activity[],
-    activeId: Activity['id']
+    activeId: Activity['id']  //(lookup type) en TypeScript
 }
 
 export const initialState: ActivityState = {
