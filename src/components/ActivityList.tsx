@@ -3,7 +3,7 @@ import type { Dispatch } from "react";
 import type { Activity } from "../types"
 import type { ActivityActions } from "../reducers/activty-reducer";
 import { categories } from "../data/categories";
-import { PencilSquareIcon } from '@heroicons/react/24/outline'
+import { PencilSquareIcon, XCircleIcon } from '@heroicons/react/24/outline'
 
 type ActivityListProps = {
   activities: Activity[]
@@ -38,6 +38,9 @@ export default function ActivityList({activities, dispatch}: ActivityListProps) 
         <div className="flex gap-5 items-center">
           <button onClick={() => dispatch({type: "set-activity", payload: { id: activity.id}})}>
             <PencilSquareIcon className="w-8 h-8 text-slate-800"/>
+          </button>
+          <button onClick={() => dispatch({type: "delete-activity", payload: { id: activity.id}})}>
+            <XCircleIcon className="w-8 h-8 text-red-600"/>
           </button>
         </div>
       </div>
