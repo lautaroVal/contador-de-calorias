@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Contador de Calorías
 
-Currently, two official plugins are available:
+Proyecto de una aplicación para contar las calorías de las actividades (comida y ejercicio) y calcular la diferencia. Hecho con React+Vite, Tailwindcss, TypeScript, Local Storage para el almacenamiento en el cliente y useReducer para el manejo complejo de estados de los componentes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Demo 🚀
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👉[Prueba el proyecto en vivo aquí](https://boisterous-kashata-fec8b1.netlify.app/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Screenshots
+
+![App Screenshot](public/screen-contador-de-calorias.png)
+
+
+## Installation  and use
+
+1. Clona el repositorio:
+
+```bash
+  git clone https://github.com/lautaroVal/contador-de-calorias.git
 ```
+2. Navega al directorio del proyecto:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+  cd contador-de-calorias
 ```
+3. Instala las dependencias:
+
+```bash
+  npm install
+```
+4. Inicia la aplicación:
+
+```bash
+  npm run dev
+```
+5. Accede a la aplicación:
+Abre tu navegador y navega a http://localhost:5173/ para interactuar con la aplicación.
+
+## Main Features ✨
+
+- Agregar alimentos y sus calorías.
+- Visualizar una lista de entradas calóricas.
+- Eliminar elementos de la lista.
+- Ver el total de calorías consumidas.
+- Diseño simple y directo, pensado para usabilidad rápida.
+
+## Technologies used 🛠️
+
+- **useReducer:** Para el manejo de estado complejo de una forma más estructurada y predecible que useState.
+- **React y TypeScript:** Construcción del proyecto con React para una arquitectura basada en componentes y TypeScript para tipado estático, mejorando la capacidad de mantenimiento del código.
+- **Tailwind CSS:** uso de Tailwind CSS para lograr un estilo que priorice la utilidad, lo que facilita la creación y el mantenimiento de un sistema de diseño consistente.
+- **Local Storage:** almacenamiento de datos en el navegador para mantener la información de los usuarios.
